@@ -15,7 +15,7 @@ uint8_t red;
 class SoftKineticCamera : public CameraAbstract {
 private:
 	void ConvertBGRToRGBA(const bgr_pixel* SoftKineticBGR, CAMERA_RGB_TYPE* d_newRgbMap);
-	uint colorWidht,colorHeight;
+	uint colorWidth,colorHeight;
 
 	static CAMERA_DEPTH_TYPE* m_depthMap;
 	static uint8_t* m_rgbMap;

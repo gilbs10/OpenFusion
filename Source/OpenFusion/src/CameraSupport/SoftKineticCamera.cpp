@@ -382,6 +382,8 @@ bool SoftKineticCamera::Init() {
 	m_depthMap=new CAMERA_DEPTH_TYPE[sizeOfDepthMap];
 	sizeOfRGBMap=colorWidth*colorHeight*sizeof(CAMERA_RGB_TYPE);
 	m_rgbMap=new uint8_t[sizeOfRGBMap];
+	this->colorWidth=colorWidth;
+	this->colorHeight=colorHeight;
 
 	cutilSafeCall(cudaMalloc((void**)&m_cudaRGBMap, sizeOfRGBMap));
 	cutilSafeCall(cudaMalloc((void**)&m_cudaDepthMap, sizeOfDepthMap));
