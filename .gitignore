@@ -31,9 +31,6 @@ Source\OpenFusion\x64\
 
 # Output files 
 *.raw
-Source/OpenFusion.opensdf
-Source/OpenFusion.sdf
-Source/OpenFusion/vc100.pdb
-Source/x64/Release/OpenFusion.exp
-Source/OpenFusion.suo
-Source/OpenFusion.sdf
+
+# DOXYGEN OUTPUT - temp
+Doc/
