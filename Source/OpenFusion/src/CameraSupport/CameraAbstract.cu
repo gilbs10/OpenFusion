@@ -190,10 +190,31 @@ __global__ void d_undistort(CameraParams m_params, CAMERA_DEPTH_TYPE* depthMap,
 		return;	//Todo: handle edges
 	}
 
-	int offset=floor(v)*width+floor(u);
-	CAMERA_DEPTH_TYPE f1= INTERP(depthMap[offset],depthMap[offset+1],FRAC(u));
-	offset=(floor(v)+1)*width+floor(u);
-	CAMERA_DEPTH_TYPE f2= INTERP(depthMap[offset],depthMap[offset+1],FRAC(u));
+	CAMERA_DEPTH_TYPE f1,f2;
+	int offset;
+	//Bottom right pixle case
+	if (floor(u)==width-1 && floor(v)==height-1) {
+		offset=floor(v)*width+floor(u);
+		f1=f2=depthMap[offset];
+	}
+	//Right edge case
+	else if (floor(u) == width-1) {
+		offset = floor(v)*width+floor(u);
+		f1 = depthMap[offset];
+		offset = (floor(v)+1)*width+floor(u);
+		f2 = depthMap[offset];
+	}
+	else {
+		offset=floor(v)*width+floor(u);
+		f1= INTERP(depthMap[offset],depthMap[offset+1],FRAC(u));
+		//Bottom edge case
+		if (floor(u) == height-1) {
+			f2=f1;
+		} else {
+			offset=(floor(v)+1)*width+floor(u);
+			f2= INTERP(depthMap[offset],depthMap[offset+1],FRAC(u));
+		}	
+	}
 	offset=y*width+x;
 	newDepthMap[offset]=INTERP(f1,f2,FRAC(v));
 	return;
