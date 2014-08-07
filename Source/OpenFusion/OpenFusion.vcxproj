@@ -31,18 +31,19 @@
       <FileType>CppCode</FileType>
     </ClCompile>
     <ClCompile Include="src\CameraSupport\WriteToFile.cpp" />
-    <ClCompile Include="src\cutil.cpp" />
-    <ClCompile Include="src\FileSystemHelper.cpp" />
+    <ClCompile Include="src\Utils\cutil.cpp" />
+    <ClCompile Include="src\Utils\FileSystemHelper.cpp" />
     <ClCompile Include="src\General.cpp" />
     <ClCompile Include="src\ICP.cpp" />
-    <ClCompile Include="src\stopwatch.cpp" />
-    <ClCompile Include="src\stopwatch_win.cpp" />
+    <ClCompile Include="src\Utils\stopwatch.cpp" />
+    <ClCompile Include="src\Utils\stopwatch_win.cpp" />
     <ClCompile Include="src\MainApp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\CudaUtilities.cuh" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="include\Utils\CudaUtilities.cuh" />
     <None Include="src\CameraSupport\GIPCam\gipFile.def" />
-    <None Include="src\stopwatch_base.inl" />
+    <None Include="src\Utils\stopwatch_base.inl" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\BasicTypes.h" />
@@ -50,12 +51,12 @@
     <ClInclude Include="include\CameraFromFile.h" />
     <ClInclude Include="include\CameraHandler.h" />
     <ClInclude Include="include\Constants.h" />
-    <ClInclude Include="include\cutil.h" />
-    <ClInclude Include="include\cutil_gl_inline.h" />
-    <ClInclude Include="include\cutil_inline.h" />
-    <ClInclude Include="include\cutil_inline_runtime.h" />
-    <ClInclude Include="include\cutil_math.h" />
-    <ClInclude Include="include\FileSystemHelper.h" />
+    <ClInclude Include="include\Utils\cutil.h" />
+    <ClInclude Include="include\Utils\cutil_gl_inline.h" />
+    <ClInclude Include="include\Utils\cutil_inline.h" />
+    <ClInclude Include="include\Utils\cutil_inline_runtime.h" />
+    <ClInclude Include="include\Utils\cutil_math.h" />
+    <ClInclude Include="include\Utils\FileSystemHelper.h" />
     <ClInclude Include="include\General.h" />
     <ClInclude Include="include\GIPCam.h" />
     <ClInclude Include="include\ICP.h" />
@@ -63,16 +64,16 @@
     <ClInclude Include="include\Raycaster.h" />
     <ClInclude Include="include\MainApp.h" />
     <ClInclude Include="include\SoftKineticCamera.h" />
-    <ClInclude Include="include\stopwatch.h" />
-    <ClInclude Include="include\stopwatch_base.h" />
-    <ClInclude Include="include\stopwatch_linux.h" />
-    <ClInclude Include="include\stopwatch_win.h" />
+    <ClInclude Include="include\Utils\stopwatch.h" />
+    <ClInclude Include="include\Utils\stopwatch_base.h" />
+    <ClInclude Include="include\Utils\stopwatch_linux.h" />
+    <ClInclude Include="include\Utils\stopwatch_win.h" />
     <ClInclude Include="include\TinyThread\tinythread.h" />
     <ClInclude Include="include\utilities.h" />
     <ClInclude Include="include\VolumeIntegrator.h" />
     <ClInclude Include="include\WriteToFile.h" />
     <ClInclude Include="src\CameraSupport\GIPCam\gipFile.h" />
-    <ClInclude Include="src\CImg.h" />
+    <ClInclude Include="src\Utils\CImg.h" />
   </ItemGroup>
   <ItemGroup>
     <CudaCompile Include="src\CameraSupport\CameraAbstract.cu" />
@@ -145,7 +146,7 @@
     <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)\OpenFusion\include\Utils;$(SolutionDir)\OpenFusion\include\TinyThread;$(DEPTHSENSESDK64)\include;.\include;C:\Development\CImg-1.5.6;C:\Program Files\OpenNI\Include;$(DXSDK_DIR)\include;C:\Development\Eigen\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\user\Documents\GitHub\OpenFusion\Source\OpenFusion\src\Utils;$(SolutionDir)\OpenFusion\include\Utils;$(SolutionDir)\OpenFusion\include\TinyThread;$(DEPTHSENSESDK64)\include;.\include;C:\Development\CImg-1.5.6;C:\Program Files\OpenNI\Include;$(DXSDK_DIR)\include;C:\Development\Eigen\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -230,7 +231,7 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\OpenFusion\Source\OpenFusion\src\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>false</GenerateDebugInformation>

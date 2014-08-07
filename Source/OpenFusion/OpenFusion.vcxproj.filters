@@ -48,25 +48,7 @@
     <ClInclude Include="include\CameraHandler.h">
       <Filter>CameraAbstract</Filter>
     </ClInclude>
-    <ClInclude Include="include\cutil_math.h">
-      <Filter>Utilities\cutil</Filter>
-    </ClInclude>
-    <ClInclude Include="include\cutil.h">
-      <Filter>Utilities\cutil</Filter>
-    </ClInclude>
-    <ClInclude Include="include\cutil_gl_inline.h">
-      <Filter>Utilities\cutil</Filter>
-    </ClInclude>
-    <ClInclude Include="include\cutil_inline.h">
-      <Filter>Utilities\cutil</Filter>
-    </ClInclude>
-    <ClInclude Include="include\cutil_inline_runtime.h">
-      <Filter>Utilities\cutil</Filter>
-    </ClInclude>
     <ClInclude Include="include\Constants.h">
-      <Filter>Utilities</Filter>
-    </ClInclude>
-    <ClInclude Include="include\FileSystemHelper.h">
       <Filter>Utilities</Filter>
     </ClInclude>
     <ClInclude Include="include\General.h">
@@ -83,18 +65,6 @@
     </ClInclude>
     <ClInclude Include="include\Raycaster.h">
       <Filter>RayCaster</Filter>
-    </ClInclude>
-    <ClInclude Include="include\stopwatch.h">
-      <Filter>Utilities\cutil</Filter>
-    </ClInclude>
-    <ClInclude Include="include\stopwatch_win.h">
-      <Filter>Utilities\cutil</Filter>
-    </ClInclude>
-    <ClInclude Include="include\stopwatch_base.h">
-      <Filter>Utilities\cutil</Filter>
-    </ClInclude>
-    <ClInclude Include="include\stopwatch_linux.h">
-      <Filter>Utilities\cutil</Filter>
     </ClInclude>
     <ClInclude Include="include\utilities.h">
       <Filter>Utilities</Filter>
@@ -115,8 +85,38 @@
     <ClInclude Include="include\TinyThread\tinythread.h">
       <Filter>Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="src\CImg.h">
+    <ClInclude Include="src\Utils\CImg.h">
       <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utils\FileSystemHelper.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utils\cutil.h">
+      <Filter>Utilities\cutil</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utils\cutil_gl_inline.h">
+      <Filter>Utilities\cutil</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utils\cutil_inline.h">
+      <Filter>Utilities\cutil</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utils\cutil_inline_runtime.h">
+      <Filter>Utilities\cutil</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utils\cutil_math.h">
+      <Filter>Utilities\cutil</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utils\stopwatch.h">
+      <Filter>Utilities\cutil</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utils\stopwatch_base.h">
+      <Filter>Utilities\cutil</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utils\stopwatch_linux.h">
+      <Filter>Utilities\cutil</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utils\stopwatch_win.h">
+      <Filter>Utilities\cutil</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -128,12 +128,6 @@
     </ClCompile>
     <ClCompile Include="src\CameraSupport\CameraHandler.cpp">
       <Filter>CameraAbstract</Filter>
-    </ClCompile>
-    <ClCompile Include="src\cutil.cpp">
-      <Filter>Utilities\cutil</Filter>
-    </ClCompile>
-    <ClCompile Include="src\FileSystemHelper.cpp">
-      <Filter>Utilities</Filter>
     </ClCompile>
     <ClCompile Include="src\General.cpp">
       <Filter>Utilities</Filter>
@@ -150,12 +144,6 @@
     <ClCompile Include="src\ICP.cpp">
       <Filter>ICP</Filter>
     </ClCompile>
-    <ClCompile Include="src\stopwatch.cpp">
-      <Filter>Utilities\cutil</Filter>
-    </ClCompile>
-    <ClCompile Include="src\stopwatch_win.cpp">
-      <Filter>Utilities\cutil</Filter>
-    </ClCompile>
     <ClCompile Include="src\CameraSupport\WriteToFile.cpp">
       <Filter>CameraAbstract\WriteToFile</Filter>
     </ClCompile>
@@ -168,6 +156,18 @@
     </ClCompile>
     <ClCompile Include="include\TinyThread\tinythread.cpp">
       <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utils\FileSystemHelper.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utils\cutil.cpp">
+      <Filter>Utilities\cutil</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utils\stopwatch.cpp">
+      <Filter>Utilities\cutil</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utils\stopwatch_win.cpp">
+      <Filter>Utilities\cutil</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -200,13 +200,14 @@
     </CudaCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\CudaUtilities.cuh">
-      <Filter>Utilities</Filter>
-    </None>
     <None Include="src\CameraSupport\GIPCam\gipFile.def">
       <Filter>CameraAbstract\GIPCam</Filter>
     </None>
-    <None Include="src\stopwatch_base.inl">
+    <None Include="ClassDiagram1.cd" />
+    <None Include="include\Utils\CudaUtilities.cuh">
+      <Filter>Utilities</Filter>
+    </None>
+    <None Include="src\Utils\stopwatch_base.inl">
       <Filter>Utilities\cutil</Filter>
     </None>
   </ItemGroup>
