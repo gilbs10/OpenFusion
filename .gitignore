@@ -31,3 +31,6 @@ Source\OpenFusion\x64\
 
 # Output files 
 *.raw
+Source/OpenFusion.opensdf
+Source/OpenFusion.sdf
+Source/OpenFusion/vc100.pdb
