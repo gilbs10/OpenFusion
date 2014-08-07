@@ -34,3 +34,5 @@ Source\OpenFusion\x64\
 Source/OpenFusion.opensdf
 Source/OpenFusion.sdf
 Source/OpenFusion/vc100.pdb
+Source/x64/Release/OpenFusion.exp
+Source/OpenFusion.suo
