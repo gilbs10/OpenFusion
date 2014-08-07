@@ -1,0 +1,11 @@
+Image width (pixels)
+Image height (pixels)
+Intrinsic-fx Intrinsic-fy
+Intrinsic-cx Intrinsic-cy
+Z offset in mm (for GIP, otherwise 0)
+Camera min depth in positive mm
+Camera max depth in positive mm
+Number of frames
+Name
+Date taken
+Camera type

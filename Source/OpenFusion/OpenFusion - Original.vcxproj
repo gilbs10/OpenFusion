@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\CameraSupport\CameraAbstract.cpp" />
+    <ClCompile Include="src\CameraSupport\CameraFromFile.cpp" />
+    <ClCompile Include="src\CameraSupport\CameraHandler.cpp" />
+    <ClCompile Include="src\CameraSupport\GIPCam.cpp" />
+    <ClCompile Include="src\CameraSupport\GIPCam\gipCalibration.cpp" />
+    <ClCompile Include="src\CameraSupport\GIPCam\gipFile.cpp" />
+    <ClCompile Include="src\CameraSupport\WriteToFile.cpp" />
+    <ClCompile Include="src\cutil.cpp" />
+    <ClCompile Include="src\FileSystemHelper.cpp" />
+    <ClCompile Include="src\General.cpp" />
+    <ClCompile Include="src\ICP.cpp" />
+    <ClCompile Include="src\PrimesenseCamera.cpp" />
+    <ClCompile Include="src\stopwatch.cpp" />
+    <ClCompile Include="src\stopwatch_win.cpp" />
+    <ClCompile Include="src\volumeRender.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\CudaUtilities.cuh" />
+    <None Include="src\CameraSupport\GIPCam\gipFile.def" />
+    <None Include="src\stopwatch_base.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\BasicTypes.h" />
+    <ClInclude Include="include\CameraAbstract.h" />
+    <ClInclude Include="include\CameraFromFile.h" />
+    <ClInclude Include="include\CameraHandler.h" />
+    <ClInclude Include="include\Constants.h" />
+    <ClInclude Include="include\cutil.h" />
+    <ClInclude Include="include\cutil_gl_inline.h" />
+    <ClInclude Include="include\cutil_inline.h" />
+    <ClInclude Include="include\cutil_inline_runtime.h" />
+    <ClInclude Include="include\cutil_math.h" />
+    <ClInclude Include="include\FileSystemHelper.h" />
+    <ClInclude Include="include\General.h" />
+    <ClInclude Include="include\GIPCam.h" />
+    <ClInclude Include="include\ICP.h" />
+    <ClInclude Include="include\PrimesenseCamera.h" />
+    <ClInclude Include="include\Raycaster.h" />
+    <ClInclude Include="include\RunApp.h" />
+    <ClInclude Include="include\stopwatch.h" />
+    <ClInclude Include="include\stopwatch_base.h" />
+    <ClInclude Include="include\stopwatch_linux.h" />
+    <ClInclude Include="include\stopwatch_win.h" />
+    <ClInclude Include="include\utilities.h" />
+    <ClInclude Include="include\VolumeIntegrator.h" />
+    <ClInclude Include="include\WriteToFile.h" />
+    <ClInclude Include="src\CameraSupport\GIPCam\gipFile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="src\CameraSupport\CameraAbstract.cu" />
+    <CudaCompile Include="src\CameraSupport\CameraHandler.cu" />
+    <CudaCompile Include="src\CameraSupport\GIPCam.cu" />
+    <CudaCompile Include="src\General.cu" />
+    <CudaCompile Include="src\ICP.cu" />
+    <CudaCompile Include="src\Raycaster.cu" />
+    <CudaCompile Include="src\VolumeIntegrator.cu" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{43703670-6208-4789-9A26-592A5096131C}</ProjectGuid>
+    <RootNamespace>OpenFusion</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 4.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Development\Eigen;C:\Development\CImg-1.5.6;include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Program Files\OpenNI\include;include;C:\Development\Eigen\include;C:\Development\CImg-1.5.6;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Development\OpenFusion\OpenFusion\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(DXSDK_DIR)\include;C:\Program Files\OpenNI\include;include;C:\Development\Eigen\include;C:\Development\CImg-1.5.6;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Development\OpenFusion\OpenFusion\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <CodeGeneration>compute_20,sm_20;compute_30,sm_30</CodeGeneration>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <CudaCompile>
+      <CodeGeneration>compute_20,sm_20;compute_30,sm_30;%(CodeGeneration)</CodeGeneration>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Optimization>O3</Optimization>
+      <GPUDebugInfo>false</GPUDebugInfo>
+    </CudaCompile>
+    <Link>
+      <AdditionalDependencies>openNI64.lib;cudart.lib;freeglut.lib;Shlwapi.lib;glew64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>C:\Development\OpenFusion\OpenFusion\lib\x64;$(OPEN_NI_LIB64);$(OPEN_NI_BIN64);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <CudaCompile>
+      <CodeGeneration>compute_20,sm_20;compute_30,sm_30;%(CodeGeneration)</CodeGeneration>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Optimization>O3</Optimization>
+    </CudaCompile>
+    <Link>
+      <AdditionalDependencies>openNI64.lib;cudart.lib;freeglut.lib;Shlwapi.lib;glew64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Development\OpenFusion\OpenFusion\lib\x64;$(OPEN_NI_LIB64);$(OPEN_NI_BIN64);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 4.2.targets" />
+  </ImportGroup>
+</Project>

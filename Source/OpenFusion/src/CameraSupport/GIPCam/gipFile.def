@@ -1,0 +1,24 @@
+LIBRARY   GipFileC 
+EXPORTS
+    clearImageDataGIP	@1
+	allocateImageData	@2
+	copyImageData		@3
+	readFileGIP			@4
+	writeFileGIP		@5
+	copyGIPHeader		@6
+	initGIPHeader		@7
+	closeFileGIP		@8
+		
+	copyReservedFields	@13
+	readSLCalibrationFile		@14
+
+	readCalibrationFile						@20
+	writeCalibrationFile					@21
+	allocateCalibrationParameters			@22
+	clearCalibrationParameters				@23
+	copyCalibrationParameters				@24
+	sizeOfCalibrationParameters				@25
+	readCalibrationParametersFromGipFile	@26
+	writeCalibrationParametersToGipFile		@27
+	
+		
