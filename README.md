@@ -10,7 +10,7 @@ The project is [Cuda](http://www.nvidia.com/object/cuda_home_new.html) based and
 
 Furthermore [cuda development kit](https://developer.nvidia.com/cuda-downloads) is also required.
 
-In addition to this the project is making use of the following libraries-
+In addition the project is making use of the following libraries-
   - [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page)
   - [Cimg](http://cimg.sourceforge.net/)
   - [OpenNI](https://github.com/OpenNI/OpenNI)
