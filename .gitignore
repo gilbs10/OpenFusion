@@ -22,3 +22,9 @@
 *.exe
 *.out
 *.app
+
+# Compiled directories
+Source\OpenFusion\x64\*
+
+# Output files 
+*.raw
