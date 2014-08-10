@@ -187,7 +187,7 @@ __global__ void d_undistort(CameraParams m_params, CAMERA_DEPTH_TYPE* depthMap,
 	
 	
 	if (floor(u)>width-1 || floor(u)<0 || floor(v)<0 || floor(v)>height-1) {
-		return;	//Todo: handle edges
+		return;	
 	}
 
 	CAMERA_DEPTH_TYPE f1,f2;

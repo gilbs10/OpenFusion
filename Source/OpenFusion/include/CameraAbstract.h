@@ -5,7 +5,7 @@
 
 
 /**
-	\brief Represnt a camera 
+	\brief Generic camera interface
 
 	This class represent a camera connected to the system.
 	The class provide an interface to get the depth/RGB frames from the camera.

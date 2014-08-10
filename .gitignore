@@ -28,6 +28,11 @@ Source/OpenFusion/x64/*
 Source/OpenFusion/x64/
 Source\OpenFusion\x64\*
 Source\OpenFusion\x64\
+Source/OpenFusion/Debug/*
+Source/OpenFusion/Debug/
+Source\OpenFusion\Debug\*
+Source\OpenFusion\Debug\
+
 
 # Output files 
 *.raw

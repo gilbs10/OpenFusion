@@ -21,7 +21,7 @@
 typedef unsigned int uint;
 typedef unsigned char uchar;
 
-// This is for inputCamera.cpp
+
 typedef unsigned short CAMERA_DEPTH_TYPE;
 typedef uint CAMERA_RGB_TYPE;
 
@@ -29,6 +29,9 @@ static const dim3 blockSize(BLOCK_SIZE, BLOCK_SIZE);
 
 // Voxels Size and type declaration
 typedef struct {
+	/**
+	\brief Stands for Truncated Surface Distance Function.
+	*/
 	float tsdf;
 	//char weight;
 } Voxel;
@@ -36,17 +39,6 @@ typedef struct {
 typedef Voxel VoxelType;
 typedef unsigned char VoxelWeightType;
 
-typedef struct { //TODO - remove
-    float3 m[3];
-} float3x3;
-
-typedef struct { //TODO - remove
-    float4 m[3];
-} float3x4;
-
-typedef struct { //TODO - remove
-	float4 m[4];
-} float4x4;
 
 typedef struct {
 	float3* vertex;

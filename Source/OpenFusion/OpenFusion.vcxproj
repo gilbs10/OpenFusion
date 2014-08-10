@@ -142,11 +142,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>C:\Program Files\OpenNI\Include;include;C:\Development\Eigen\include;C:\Development\CImg-1.5.6;$(IncludePath)</IncludePath>
-    <IncludePath>$(SolutionDir)\OpenFusion\include\Utils;$(SolutionDir)\OpenFusion\include\TinyThread;$(DEPTHSENSESDK64)\include;.\include;C:\Development\CImg-1.5.6;C:\Program Files\OpenNI\Include;$(DXSDK_DIR)\include;C:\Development\Eigen\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\OpenFusion\src\Utils;$(SolutionDir)\OpenFusion\include\Utils;$(SolutionDir)\OpenFusion\include\TinyThread;$(DEPTHSENSESDK64)\include;.\include;C:\Development\CImg-1.5.6;C:\Program Files\OpenNI\Include;$(DXSDK_DIR)\include;C:\Development\Eigen\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\user\Documents\GitHub\OpenFusion\Source\OpenFusion\src\Utils;$(SolutionDir)\OpenFusion\include\Utils;$(SolutionDir)\OpenFusion\include\TinyThread;$(DEPTHSENSESDK64)\include;.\include;C:\Development\CImg-1.5.6;C:\Program Files\OpenNI\Include;$(DXSDK_DIR)\include;C:\Development\Eigen\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\OpenFusion\src\Utils;$(SolutionDir)\OpenFusion\include\Utils;$(SolutionDir)\OpenFusion\include\TinyThread;$(DEPTHSENSESDK64)\include;.\include;C:\Development\CImg-1.5.6;C:\Program Files\OpenNI\Include;$(DXSDK_DIR)\include;C:\Development\Eigen\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -194,6 +194,7 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <OpenMPSupport>true</OpenMPSupport>
       <AdditionalOptions>-g3 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\OpenFusion\src\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -231,7 +232,7 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <WholeProgramOptimization>true</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\OpenFusion\Source\OpenFusion\src\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\OpenFusion\src\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>false</GenerateDebugInformation>
