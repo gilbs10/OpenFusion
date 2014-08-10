@@ -3,6 +3,8 @@
 
 #include "CameraAbstract.h"
 #include "DepthSense.hxx"
+#include <tinythread.h>
+
 using namespace DepthSense;
 
 typedef struct{
@@ -23,6 +25,8 @@ private:
 	static CAMERA_DEPTH_TYPE* m_cudaDepthMap;
 	static uint sizeOfDepthMap,sizeOfRGBMap;
 	static bool m_bDeviceFound;
+	static tthread::mutex depth_mutex;
+	static tthread::mutex rgb_mutex;
 
 	static void onNewAudioSample(AudioNode node, AudioNode::NewSampleReceivedData data);
 	static void onNewColorSample(ColorNode node, ColorNode::NewSampleReceivedData data);
@@ -36,6 +40,8 @@ private:
 	static void onDeviceConnected(DepthSense::Context context, DepthSense::Context::DeviceAddedData data);
 	static void onDeviceDisconnected(DepthSense::Context context, DepthSense::Context::DeviceRemovedData data);
 	
+	tthread::thread* eventThread;
+
 protected:
 
 	
