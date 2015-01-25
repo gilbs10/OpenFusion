@@ -1,0 +1,4 @@
+#cmakedefine BUILD_SOFTKINETIC
+#cmakedefine BUILD_GIPCAM
+#cmakedefine BUILD_PRIMESENSE
+#cmakedefine BUILD_FROMFILE

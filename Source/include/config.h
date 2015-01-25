@@ -1,0 +1,4 @@
+#define BUILD_SOFTKINETIC
+/* #undef BUILD_GIPCAM */
+/* #undef BUILD_PRIMESENSE */
+#define BUILD_FROMFILE
