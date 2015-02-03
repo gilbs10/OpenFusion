@@ -13,4 +13,4 @@ Furthermore [cuda development kit](https://developer.nvidia.com/cuda-downloads) 
 In addition the project is making use of the following libraries-
   - [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page)
   - [Cimg](http://cimg.sourceforge.net/)
-  - [OpenNI](https://github.com/OpenNI/OpenNI)
+  - [OpenNI](https://github.com/OpenNI/OpenNI )
